@@ -1,0 +1,19 @@
+28-09-2026, Amin Walizada
+
+engineering
+marketing
+operations
+admins
+
+Engineering	alice, bob, carol, dave	engineering	Read/write to /shared/engineering
+Marketing	emma, frank, grace	marketing	Read/write to /shared/marketing
+Operations	henry, iris, jack, kate, leo	operations	Read/write to /shared/operations
+Admins	kate, leo	admins	Write to the company-wide folders (/shared/company-docs, /logs/reports)
+
+/shared/
+├── engineering/       engineering group, mode 770
+├── marketing/         marketing group,   mode 770
+├── operations/        operations group,  mode 770
+└── company-docs/      admins group,      mode 775
+/logs/
+└── reports/           admins group,      mode 775
