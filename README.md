@@ -126,3 +126,17 @@ the VM with:
 
     # Lima: repo is mounted at /host inside the VM
     bash /host/verify-backup.sh
+
+## Section 6: EC2 Deployment
+
+Deployed the CloudByte server to a t3.micro Amazon Linux 2023 EC2 instance.
+Rebuilt the four groups, the twelve users (kate and leo dual-grouped into
+`admins`), and the full `/shared/` tree from scratch on the new host. Sent the
+two existing docs and the three scripts across with `scp`, re-established the
+backup and cleanup cron pipeline with EC2-absolute paths, and wrote a reflective
+`differences-log.txt` recording what changed between the local VM and the cloud.
+
+Files added this section:
+- `verify-ec2.sh`: runs on EC2, checks the whole deployment from scratch.
+- `data/cloudbyte-users.csv`: the twelve-staffer production roster.
+- `docs/differences-log.txt`: local-VM-versus-EC2 reflection.
