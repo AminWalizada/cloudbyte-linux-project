@@ -14,22 +14,22 @@ Built the core of the server: four groups (`engineering`, `marketing`,
 
 ### Groups and users
 
-| Group | Members |
-|---|---|
-| `engineering` | alice, bob, carol, dave |
-| `marketing` | emma, frank, grace |
-| `operations` | henry, iris, jack, kate, leo |
-| `admins` | kate, leo |
+| Group         | Members                      |
+|---------------|------------------------------|
+| `engineering` | alice, bob, carol, dave      |
+| `marketing`   | emma, frank, grace           |
+| `operations`  | henry, iris, jack, kate, leo |
+| `admins`      | kate, leo                    |
 
 ### Directory structure
 
-| Path | Group | Mode |
-|---|---|---|
+| Path                  | Group       | Mode  |
+|-----------------------|-------------|-------|
 | `/shared/engineering` | engineering | `770` |
-| `/shared/marketing` | marketing | `770` |
-| `/shared/operations` | operations | `770` |
-| `/shared/company-docs` | admins | `775` |
-| `/logs/reports` | admins | `775` |
+| `/shared/marketing`   | marketing   | `770` |
+| `/shared/operations`  | operations  | `770` |
+| `/shared/company-docs`| admins      | `775` |
+| `/logs/reports`       | admins      | `775` |
 
 ### Verification
 
@@ -50,12 +50,12 @@ A permissions test report records what was attempted and what happened.
 
 ### Updated directory modes
 
-| Path | Owner:Group | Mode | What's special |
-|---|---|---|---|
-| `/shared/engineering` | `root:engineering` | `2770` | setgid set |
-| `/shared/marketing` | `root:marketing` | `2770` | setgid set |
-| `/shared/operations` | `root:operations` | `2770` | setgid set |
-| `/shared/dropbox` | `root:admins` | `1773` | sticky bit; others can write but not list |
+| Path                  | Owner:Group        | Mode   | What's special                            |
+|-----------------------|--------------------|--------|-------------------------------------------|
+| `/shared/engineering` | `root:engineering` | `2770` | setgid set                                |
+| `/shared/marketing`   | `root:marketing`   | `2770` | setgid set                                |
+| `/shared/operations`  | `root:operations`  | `2770` | setgid set                                |
+| `/shared/dropbox`     | `root:admins`      | `1773` | sticky bit; others can write but not list |
 
 ### Verification
 
@@ -149,3 +149,12 @@ levels spread across the day. `analyse-logs.sh` summarises it into a timestamped
 report under `/logs/reports/`: counts by severity, the busiest hour, and every
 CRITICAL entry, using a `sort | uniq -c | sort -rn` pipeline. Scheduled the
 analysis hourly via cron, and added `verify-logs.sh` to check the lot.
+
+## Section 8: System Health Dashboard
+
+Built system-health.sh on the EC2 server. It snapshots uptime/load, memory,
+disk, the top processes by CPU, the status of crond and sshd, and logged-in
+users into a printf-formatted, timestamped report under /logs/health-reports/.
+It raises basic alerts (disk over 80%, zombie processes, a monitored service
+down) and archives reports older than a week. Scheduled every 2 hours via cron,
+and added verify-health.sh to check the lot.
