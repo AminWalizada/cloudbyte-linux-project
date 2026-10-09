@@ -170,3 +170,28 @@ users into a printf-formatted, timestamped report under /logs/health-reports/.
 It raises basic alerts (disk over 80%, zombie processes, a monitored service
 down) and archives reports older than a week. Scheduled every 2 hours via cron,
 and added verify-health.sh to check the lot.
+
+## Section 9: Administration Menu
+
+Created `scripts/admin-menu.sh`, an interactive menu that provides a single
+ entry point for CloudByte's Linux administration tools:
+
+- User onboarding
+- Shared-directory backups
+- Backup cleanup
+- Test log generation
+- Application log analysis
+- System health reporting
+
+The menu checks whether a tool is installed before running it, handles invalid selections,
+provides usage instructions, and requires root privileges for administration tasks.
+
+### Verification
+
+`verify-menu.sh` tests that the menu is executable, displays help without root privileges,
+enforces the root guard, dispatches valid selections, rejects invalid input, and handles missing tools safely.
+
+Run the verification script without `sudo`:
+
+```bash
+bash verify-menu.sh
