@@ -1,7 +1,7 @@
 #!/bin/bash
 # log-generator.sh: simulate a CloudByte application log with severity levels.
 # Author:  Amin Walizada
-# Created: 07-10-2026
+# Created: 2026-10-07
 # Purpose: Append COUNT synthetic timestamped lines to /logs/cloudbyte-app.log,
 #          spread across the last 24 hours, for analyse-logs.sh to summarise.
 # Usage:   sudo bash log-generator.sh [count]   (count defaults to 200)

@@ -1,6 +1,7 @@
 #!/bin/bash
 # verify-onboarding.sh: CloudByte Section 3 self-check
-
+# Author: Amin Walizada
+# Created: 2026-09-30
 # Adjust these two lines if your layout differs.
 # Vagrant default:
 SCRIPT=/vagrant/scripts/onboard-user.sh

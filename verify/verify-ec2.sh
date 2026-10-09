@@ -1,7 +1,7 @@
 #!/bin/bash
 # verify-ec2.sh: CloudByte Section 6 self-check (runs on EC2)
-# Author:  <your name>
-# Created: <date>
+# Author:  Amin Walizada
+# Created: 2026-10-02
 # Purpose: Test every Section 6 deliverable on the EC2 instance:
 #          users, groups, directories, docs, scripts, cron, differences-log.
 # Usage:   bash verify-ec2.sh

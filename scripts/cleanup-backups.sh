@@ -1,6 +1,7 @@
 #!/bin/bash
 # cleanup-backups.sh: CloudByte Solutions backup cleanup script.
 # # Author: Amin Walizada
+# # Date: 2026-10-06
 # # Purpose: Remove backup archives older than the configured retention period.
 # # Usage: sudo bash cleanup-backups.sh
 # # Usage: sudo ./cleanup-backups.sh

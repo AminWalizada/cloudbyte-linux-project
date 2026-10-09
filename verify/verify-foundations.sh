@@ -1,5 +1,7 @@
 #!/bin/bash
 # verify-foundations.sh: CloudByte Server Foundations self-check
+# Author: Amin Walizada
+# Created: 2026-10-01
 # Resolve the script's own directory so repo-relative checks (like the
 # setup log on the host) work no matter where the script is invoked from.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

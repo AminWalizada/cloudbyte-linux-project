@@ -1,7 +1,7 @@
 #!/bin/bash
 # system-health.sh: snapshot CloudByte server health into a timestamped report.
 # Author:  Amin Walizada
-# Created: 08-10-2026
+# Created: 2026-10-08
 # Purpose: Capture uptime/load, memory, disk, the top processes, service status,
 #          and logged-in users; format with printf; write to /logs/health-reports/
 #          and print it. (Alerts and archiving added in later steps.)

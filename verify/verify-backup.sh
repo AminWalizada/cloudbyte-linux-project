@@ -1,6 +1,5 @@
 #!/bin/bash
 # verify-backup.sh: CloudByte Section 4 self-check
-
 # Adjust these two lines if your layout differs.
 # Vagrant default:
 BACKUP_SCRIPT=/vagrant/scripts/backup-shared.sh
