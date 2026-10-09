@@ -6,6 +6,18 @@ fictional 12-person startup that needs a properly configured multi-user
 Linux server: user accounts, group-based file access, automated backups,
 log analysis, and system health reporting.
 
+## Skills Demonstrated
+
+- Linux administration and file permissions
+- Bash scripting and task automation
+- User and group management
+- Backup creation and retention cleanup
+- Log generation, analysis, and reporting
+- System health monitoring
+- Cron scheduling and troubleshooting
+- AWS EC2 deployment and management
+- Git and GitHub version control
+
 ## Section 1: Server Foundations
 
 Built the core of the server: four groups (`engineering`, `marketing`,
